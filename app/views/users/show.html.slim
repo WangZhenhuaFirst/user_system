@@ -1,3 +1,19 @@
-p = @user.name 
 
-p = @user.email 
+h1 
+  | 个人资料
+
+h4
+  | 姓名:  
+  = @user.name 
+
+h4
+  | 邮箱:
+  = @user.email 
+
+h4 
+  | 电话:
+  = @user.telephone
+
+h4 
+  | 账号权限:
+  = @user.is_admin

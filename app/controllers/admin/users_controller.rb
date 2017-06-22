@@ -1,4 +1,6 @@
 class Admin::UsersController < ApplicationController
+  before_action :require_is_admin
+
 
   def index
     @q = User.ransack(params[:q])
@@ -31,6 +33,13 @@ class Admin::UsersController < ApplicationController
   def  user_params
 	  params.require(:user).permit(:name, :telephone, :email, :password, :password_confirmation, :is_admin, :remark)
   end 
+
+  def require_is_admin
+    if !current_user.is_admin?
+      flash[:alert] = "You are not admin"
+      redirect_to root_path
+    end 
+  end
 
 
 end

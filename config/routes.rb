@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "welcome#index"
 
-  get '/help',  to: 'static_pages#help'
-  get '/about', to: 'static_pages#about'
-  get '/contact', to: 'static_pages#contact'
+  
   get '/signup', to: 'users#new'
 
   get '/login', to: 'sessions#new'
@@ -14,7 +12,16 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   
 
-  resources :users 
+ resources :users 
+
+
+  namespace :admin do 
+    resources :users
+  end 
+
+
+
+
 
 end
   

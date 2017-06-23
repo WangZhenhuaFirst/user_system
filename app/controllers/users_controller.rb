@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     	if @user.save 
             log_in @user 
     		flash[:success] = "注册成功"
-            redirect_to root_url
+            redirect_to user_path(@user)
         else
         	render 'new'
         end 

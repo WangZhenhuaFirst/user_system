@@ -14,8 +14,14 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 @import "signup";
 @import "users";
-@import "admin/users"
+@import "admin/users";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "animate";
+@import "style";
+@import "show";
+@import "edit";

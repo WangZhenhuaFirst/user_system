@@ -1,7 +1,7 @@
 nav class="navbar navbar-default" role="navigation"
     .container-fluid
       .navbar-header
-        a.navbar-brand href="/" 
+        a.navbar-brand href="/welcome" 
           | 郎客
         
 
@@ -11,8 +11,9 @@ nav class="navbar navbar-default" role="navigation"
           
 
           -if logged_in?
-            
-            li.dropdown
+            a.navbar-brand href="#"
+              | FAQ
+            li.dropdown   
               a.dropdown-toggle href='#' data-toggle='dropdown'
                | 账号 <b class="caret"></b>
 
@@ -22,15 +23,15 @@ nav class="navbar navbar-default" role="navigation"
                     = link_to "后台管理区", admin_users_path
                  
                 li
-                  = link_to "个人资料", current_user
-                  = link_to "设置", edit_user_path(current_user) 
+                  = link_to "个人主页", current_user
+                  = link_to "我的账户", edit_user_path(current_user) 
                 
                 li.divider
                 li
                   = link_to "退出", logout_path, method: "delete"
           -else 
             li
-              = link_to("注册", signup_path)
+              = link_to("注册", new_user_path)
             li
               = link_to "登录", login_path
 

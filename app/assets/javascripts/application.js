@@ -17,8 +17,6 @@
 //= require jquery.metisMenu
 //= require jquery.slimscroll.min
 //= require inspinia
-//= require pace.min 
-//= require jquery.peity.min.js 
-//= require peity-demo.js 
+//= require pace.min
 //= require turbolinks
 //= require_tree .

@@ -1,4 +1,4 @@
-nav class="navbar navbar-default" role="navigation"
+nav class="navbar navbar-default gray-bg" role="navigation" style="margin-bottom:-2px;"
     .container-fluid
       .navbar-header
         a.navbar-brand href="/welcome" 
@@ -11,7 +11,7 @@ nav class="navbar navbar-default" role="navigation"
           
 
           -if logged_in?
-            a.navbar-brand href="#"
+            a.navbar-brand href="/admin/users/faq"
               | FAQ
             li.dropdown   
               a.dropdown-toggle href='#' data-toggle='dropdown'

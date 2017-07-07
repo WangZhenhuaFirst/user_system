@@ -8,8 +8,8 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
   
 
-  body
-    div.container-fluid
+  body 
+    div.container-fluid style="padding:0;"
       = render "common/navbar" 
       = render "common/flashes" 
       = yield 

@@ -16,8 +16,14 @@ Rails.application.routes.draw do
  
 
   namespace :admin do 
-    resources :users
+    resources :users  do
+      collection do  
+        get :faq
+      end
+    end
   end 
+
+
 
 end
   

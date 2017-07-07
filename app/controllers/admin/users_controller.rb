@@ -1,6 +1,6 @@
 class Admin::UsersController < ApplicationController
   before_action :require_is_admin
-
+  
 
   def index
     @q = User.ransack(params[:q])
@@ -26,6 +26,9 @@ class Admin::UsersController < ApplicationController
   	@user.destroy
   	flash[:success] = "User deleted"
   	redirect_to admin_users_path
+  end 
+
+  def faq
   end 
 
   private
